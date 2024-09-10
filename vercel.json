@@ -1,13 +1,11 @@
 {
-    "builds": [
-      {
-        "src": "src/index.html",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "dist"
-        }
-      }
-    ],
-    "outputDirectory": "dist"
-  }
+  "builds": [
+    {
+      "src": "src/index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "outputDirectory": "dist"
+}
+
   

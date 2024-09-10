@@ -1,0 +1,448 @@
+// Configurações gerais
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  padding: 80px 8%;
+}
+
+// Config Header
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background-image: url(../images/back-header.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .logo img {
+    width: 80px;
+    cursor: pointer;
+  }
+
+  //menu
+  #nav ul {
+    display: flex;
+
+    li {
+      a {
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        font-size: 17px;
+        padding: 5px 10px;
+      }
+
+      a:hover {
+        background: linear-gradient(to right, #04033b, #2c0301);
+        transition: background-position 0.5s ease-out;
+        padding: 5px 10px;
+        border-radius: 0px 20px 0px 20px;
+      }
+    }
+  }
+
+  //Menu Mobile
+  #menu-mobile {
+    width: 32px;
+    cursor: pointer;
+    display: none;
+
+    span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: #fff;
+      margin: 5px 0;
+    }
+  }
+}
+
+// Config Main
+main#section-principal {
+  background-color: #04033b;
+
+  //Section sobre
+  #sobre {
+    margin-top: 80px;
+
+    .sobre-desc-img {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+
+      .sobre-img img {
+        width: 200px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        margin-top: 22px;
+      }
+    }
+  }
+
+  #sobre > .container {
+    h2,
+    h3 {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 32px;
+    }
+
+    .sobre-descricao p,
+    .sobre-o-evento p {
+      color: #fff;
+      text-align: justify;
+      margin-top: 20px;
+
+      strong {
+        color: #106108f3;
+        font-weight: 700;
+      }
+    }
+  }
+
+  //Config Atrações e Eventos
+
+  #eventos-e-atracoes > .container h4 {
+    color: #fff;
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+
+  .atracoes {
+    .atracao {
+      display: flex;
+      gap: 40px;
+      padding-top: 15px;
+
+      .atracoes-evento,
+      .atracao-desc {
+        height: auto;
+      }
+
+      .atracao-desc {
+        p {
+          color: #fff;
+          text-align: justify;
+        }
+
+        p.title-desc {
+          color: #fff;
+          font-size: 22px;
+          text-transform: uppercase;
+        }
+
+        p.subtitle-desc {
+          color: #fff;
+          font-size: 18px;
+          margin: 10px 0px;
+          text-transform: uppercase;
+        }
+      }
+
+      img {
+        width: 100%;
+        margin: 5px 0;
+        border-radius: 5px;
+      }
+    }
+
+    .invert {
+      flex-direction: row-reverse;
+      margin: 40px 0;
+    }
+  }
+} // Fim Config Atrações e Eventos
+
+// Config section Participar
+.participar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 40px;
+
+  .countdown {
+    display: flex;
+    font-size: 2rem;
+    gap: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+
+  .countdown div {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .value {
+    display: block;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .label {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  a {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    border: 1px solid #f9f9f9;
+    border-radius: 5px;
+    background-image: linear-gradient(
+      to right,
+      #ff7e5f,
+      #feb47b
+    ); /* gradiente da esquerda para a direita */
+    background-size: 0% 100%; /* começa com 0% de largura */
+    background-repeat: no-repeat;
+    transition: background-size 0.5s ease-in-out; /* animação suave */
+  }
+
+  a:hover {
+    background-size: 100% 100%; /* ao passar o mouse, preenche o link */
+  }
+}
+
+//Config Footer
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 10px;
+
+  background-image: url(../images/bg-footer.avif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  h5 {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+
+    p {
+      color: #fff;
+      font-size: 14px;
+    }
+
+    p.tel-email {
+      font-size: 12px;
+    }
+
+    .social-media {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      i {
+        gap: 140px;
+        font-size: 25px;
+        margin: 5px;
+        cursor: pointer;
+      }
+
+      .fa-facebook {
+        color: #1877f2;
+      }
+
+      .fa-instagram {
+        color: #c13584;
+      }
+
+      .fa-linkedin {
+        color: #0077b5;
+      }
+
+      .fa-whatsapp {
+        color: #25d366;
+      }
+    }
+  }
+}
+
+/*
+.
+.
+.
+.
+.
+.
+.
+. 
+*/
+
+// RESPONSIVIDADE DA PÁGINA
+
+// Responsividade do Menu
+@media (max-width: 768px) {
+  #menu-mobile {
+    display: block !important;
+  }
+
+  #menu {
+    display: block !important;
+    position: absolute;
+    width: 80%;
+    top: 100px;
+    right: 0;
+    background-color: #04033b;
+    height: 0px !important;
+    visibility: hidden;
+    z-index: 1001;
+    transition: 0.6s !important;
+    overflow-y: hidden;
+  }
+
+  #menu a {
+    display: block;
+    padding: 1rem 0 !important;
+    margin: 0 1rem !important;
+    border-bottom: 2px solid #f9f9f9 !important;
+  }
+
+  #menu a:hover {
+    background: none !important;
+    border-radius: 0px 0px 0px 0px !important;
+  }
+
+  nav.active #menu {
+    height: calc(100vh - 90px) !important;
+    visibility: visible;
+    overflow: auto;
+  }
+
+  nav.active #menu-mobile {
+    .transparente {
+      display: none !important;
+    }
+
+    .rotate-positive {
+      transform: rotate(135deg);
+      transition: 0.5s;
+    }
+
+    .rotate-negative {
+      position: relative;
+      transform: rotate(-135deg);
+      top: -7px;
+      transition: 0.5s;
+    }
+  }
+} // Fim Responsividade Menu
+
+// Responsividade Section Sobre
+@media (max-width: 710px) {
+  #sobre > .container {
+    h2,
+    h3 {
+      font-size: 28px;
+    }
+
+    h3 {
+      margin-top: 20px;
+    }
+
+    .sobre-descricao p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .container h2,
+  h3 {
+    text-align: center;
+  }
+  .sobre-desc-img {
+    flex-direction: column;
+
+    .sobre-img {
+      order: 1;
+      display: flex;
+      justify-content: center;
+      margin-bottom: -20px;
+    }
+
+    .sobre-descricao {
+      order: 2;
+    }
+  }
+}
+
+@media (max-width: 332px) {
+  #sobre > .container {
+    h2,
+    h3 {
+      font-size: 24px !important;
+    }
+  }
+}
+
+// Fim esponsividade Section Sobre
+
+//Responsividade Section Atrações
+@media (max-width: 768px) {
+  .atracao {
+    flex-direction: column-reverse;
+    .atracoes-evento,
+    .atracao-desc {
+      width: 100%;
+      margin: 0 auto;
+      img {
+        width: 100%;
+        margin-top: -30px;
+      }
+    }
+  }
+
+  .invert {
+    flex-direction: column-reverse !important;
+  }
+}
+// Fim Responsividade Section Atrações
+
+// Responsividade Section Participar
+
+@media (max-width: 500px) {
+  .countdown {
+    font-size: 1.5rem;
+  }
+
+  .countdown div {
+    flex: 1 1 100%;
+    margin: 10px;
+  }
+}

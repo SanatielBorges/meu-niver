@@ -1,6 +1,6 @@
 // Inicialização da biblioteca AOS
 AOS.init({
-  duration: 1500,
+  duration: 1000,
   easing: "ease-in-out",
 });
 
